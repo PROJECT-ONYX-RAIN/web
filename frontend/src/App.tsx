@@ -52,7 +52,6 @@ function App() {
             <Route path="/order/:id" element={<OrderDetail />}></Route>
             <Route path="/payment" element={<PaymentScreen />}></Route>
           </Routes>
-          
         </main>
         <footer>
           &copy; 2022 Onyx Rain
