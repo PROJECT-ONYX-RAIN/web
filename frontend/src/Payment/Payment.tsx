@@ -20,13 +20,10 @@ function PaymentScreen(){
 
                             <li>
                                 <div>
-                                    <input>
-                                        type="radio"
-                                        name="paymentMethod"
-                                        id="paymentMethod"
-                                        value="paypal"
-                                    </input>
+                                    <input type="radio" name="paymentMethod" id="paymentMethod" value="paypal" />
                                     <label htmlFor="paymentMethod">Paypal</label>
+                                    <input type="radio" name="paymentMethod" id="paymentMethod" value="bitcoin" />
+                                    <label htmlFor="paymentMethod">Bitcoin</label>
                                 </div>
                             </li>
                                 

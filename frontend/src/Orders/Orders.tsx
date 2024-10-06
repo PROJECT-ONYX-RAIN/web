@@ -33,7 +33,7 @@ function Orders() {
             <td>{order.isPaid ? 'Yes' : 'No'}</td>
             <td>{order.paidAt}</td>
             <td>{order.isDelivered ? 'Yes' : 'No'}</td>
-            <td>{order.deliverableData}</td>
+            <td>{order.deliveredDate}</td>
             <td>
                 <Link to={"/order/" + order._id} className="button secondary">
                     Details
