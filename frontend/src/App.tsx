@@ -6,6 +6,7 @@ import Home from "./Home/Home" ;
 import Products from "./Products/Products" ;
 import Orders from './Orders/Orders'
 import OrderDetail from './Orders/OrderDetail'; 
+import PaymentScreen from './Payment/Payment';
 
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
           <div className="header-links">
             <Link to="/">Home</Link>
             <Link to="/catalog">Catalog</Link>
-            <link to="/orders">Orders</link>
+            <Link to="/orders">Orders</Link>
+            <Link to="/payment">Payment</Link>
           </div>
         </header>
         <aside className="sidebar">
@@ -46,57 +48,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/catalog" element={<Products />} />
-            <Route path="orders" element={Orders />}></Route>
+            <Route path="orders" element={<Orders />}></Route>
             <Route path="/order/:id" element={<OrderDetail />}></Route>
+            <Route path="/payment" element={<PaymentScreen />}></Route>
           </Routes>
-          {/* <div className="content">
-            <ul className="products">
-              <li>
-                <div className="product">
-                  <img className="product-image" src="images/d1.jpg" alt="product"></img>
-                    <div className="product-name">
-                      <a href="product.html">Slim Shirt</a>
-                    </div>
-                    <div className="product-brand">Nike</div>
-                    <div className="product-price">$60</div>
-                    <div className="product-rating">4.5 Stars (10 Reviews)</div>
-                </div>
-              </li>
-              <li>
-                              <div className="product">
-                                  <img className="product-image" src="images/d1.jpg" alt="product"></img>
-                                      <div className="product-name">
-                                          <a href="product.html">Slim Shirt</a>
-                                      </div>
-                                  <div className="product-brand">Nike</div>
-                                  <div className="product-price">$60</div>
-                                  <div className="product-rating">4.5 Stars (10 Reviews)</div>
-                              </div>
-              </li>
-              <li>
-                              <div className="product">
-                                  <img className="product-image" src="images/d1.jpg" alt="product"></img>
-                                      <div className="product-name">
-                                          <a href="product.html">Slim Shirt</a>
-                                      </div>
-                                  <div className="product-brand">Nike</div>
-                                  <div className="product-price">$60</div>
-                                  <div className="product-rating">4.5 Stars (10 Reviews)</div>
-                              </div>
-              </li>
-              <li>
-                <div className="product">
-                  <img className="product-image" src="images/d1.jpg" alt="product"></img>
-                    <div className="product-name">
-                      <a href="product.html">Slim Shirt</a>
-                    </div>
-                    <div className="product-brand">Nike</div>
-                    <div className="product-price">$60</div>
-                    <div className="product-rating">4.5 Stars (10 Reviews)</div>
-                </div>
-              </li>
-            </ul>
-          </div> */}
+          
         </main>
         <footer>
           &copy; 2022 Onyx Rain
