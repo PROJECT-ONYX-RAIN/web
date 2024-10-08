@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import data from './fulfillmentData';
+import data from './FulfillmentData';
 
 function fulfillment() {
     return (
@@ -12,7 +12,7 @@ function fulfillment() {
                 <table className="table">
                     <thead>
                         <tr>
-                            <th>ID</th> //
+                            <th>ID</th>
                             <th>TrackingID</th>
                             <th>Is Shipped</th>
                             <th>Shipping Date</th>
@@ -22,8 +22,8 @@ function fulfillment() {
                         </tr>
                     </thead>
                     <tbody>
-    {FulfillmentData.orders.map((order) => (
-        <tr key={order._id} style={{ color: item.status === 'Unshipped' ? 'red' : 'black' }}>
+    {data.orders.map((order) => (
+        <tr key={order._id} style={{ color: order.isShipped === false ? 'red' : 'black' }}>
             <td>{order._id}</td>
             <td>{order.TrackingID}</td>
             <td>{order.isShipped ? 'Yes' : 'No'}</td>
