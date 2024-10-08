@@ -7,6 +7,7 @@ import Products from "./Products/Products" ;
 import Orders from './Orders/Orders'
 import OrderDetail from './Orders/OrderDetail'; 
 import PaymentScreen from './Payment/Payment';
+import Fulfillment from './Fulfillment/Fulfillment';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Link to="/catalog">Catalog</Link>
             <Link to="/orders">Orders</Link>
             <Link to="/payment">Payment</Link>
+            <Link to="/fulfillment">Fulfillment</Link> {/* Added Fulfillment Link */}
           </div>
         </header>
         <aside className="sidebar">
@@ -51,6 +53,7 @@ function App() {
             <Route path="orders" element={<Orders />}></Route>
             <Route path="/order/:id" element={<OrderDetail />}></Route>
             <Route path="/payment" element={<PaymentScreen />}></Route>
+            <Route path="/fulfillment" element={<Fulfillment />} />
           </Routes>
         </main>
         <footer>
